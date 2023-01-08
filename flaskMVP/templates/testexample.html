@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>{% block title %}Engineering 67{% endblock %}</title>
+</head>
+<body>  
+
+{% block content %}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+ function makeJson(){
+ const elem_a1 = document.getElementById('a1');
+ const elem_c13 = document.getElementById('c13');
+ let json12 = JSON.stringify({elem_a1: elem_a1.value,elem_c13:elem_c13.value});
+ console.log("json сформирован");
+ console.log(json12);
+ return;
+ };
+
+ function sendData(){
+ const elem_a1 = document.getElementById('a1');
+ const elem_c13 = document.getElementById('c13');
+ let json12 = JSON.stringify({elem_a1: elem_a1.value,elem_c13:elem_c13.value});
+ console.log(json12);
+ fetch('http://127.0.0.1:5000/json-example', {
+    method: 'POST',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
+    body: json12
+})
+.then(response => response.json())
+.then(response => console.log(JSON.stringify(response)))
+return;
+console.log("данные отправлены");
+ };
+ </script>
+    <h1>Заполнение данных Excel</h1>
+
+<h1></h1>
+
+<table class="table">
+<tr>
+<button onclick="makeJson()" type="button" class="btn btn-outline-primary" value="Сформировать json">Сформировать json</button>
+</tr> 
+<tr>
+<button onclick="sendData()" type="button" class="btn btn-outline-primary"value= "Отправить">Отправить</button>
+</tr> 
+</table>
+
+
+
+<form action="#" method="POST">
+  <table class="table">
+  <thead>
+      <th scope="col" width="5%" >#</th>
+      <th scope="col" width="5%" >Ссылка</th>
+      <th scope="col" width="90%">Значение</th>
+  </thead>
+  <tbody>
+     <tr>
+      <th scope="row">1</th>
+      <td><p><input type="text" name="labelA1" id="lebA1" value="A1" placeholder="A1"/></p></td>
+      <td>	<p><input type="text" name="user_nameA1" id="valA1" value="Значение элемента A1" placeholder="Значение элемента A1"/></p></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><p><input type="text" name="labelA2" id="lebA2" value="A2" placeholder="A2"/></p></td>
+      <td>	<p><input type="text" name="user_nameA2" id="valA2" value="Значение элемента A2" placeholder="Значение элемента A2"/></p></td>
+	 </tr>
+	      <tr>
+      <th scope="row">1</th>
+      <td><p><input type="text" name="labelA3" id="lebA3" value="A3" placeholder="A3"/></p></td>
+      <td>	<p><input type="text" name="user_name1" id="a1" value="Значение элемента a1" placeholder="Значение элемента a1"/></p></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><p><input type="text" name="labelC13" id="lebC13" value="C13" placeholder="C13"/></p></td>
+      <td>	<p><input type="text" name="user_name2" id="c13" value="Значение элемента c13" placeholder="Значение элемента c13"/></p></td>
+	 </tr>
+	 <tr>
+      <th scope="row">1</th>
+      <td><p><input type="text" name="label1" id="lebA1" value="A1" placeholder="A1"/></p></td>
+      <td>	<p><input type="text" name="user_name1" id="a1" value="Значение элемента a1" placeholder="Значение элемента a1"/></p></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><p><input type="text" name="labelC13" id="lebC13" value="C13" placeholder="C13"/></p></td>
+      <td>	<p><input type="text" name="user_name2" id="c13" value="Значение элемента c13" placeholder="Значение элемента c13"/></p></td>
+	 </tr>
+	      <tr>
+      <th scope="row">1</th>
+      <td><p><input type="text" name="label1" id="lebA1" value="A1" placeholder="A1"/></p></td>
+      <td>	<p><input type="text" name="user_name1" id="a1" value="Значение элемента a1" placeholder="Значение элемента a1"/></p></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><p><input type="text" name="labelC13" id="lebC13" value="C13" placeholder="C13"/></p></td>
+      <td>	<p><input type="text" name="user_name2" id="c13" value="Значение элемента c13" placeholder="Значение элемента c13"/></p></td>
+	 </tr>
+	      <tr>
+      <th scope="row">1</th>
+      <td><p><input type="text" name="label1" id="lebA1" value="A1" placeholder="A1"/></p></td>
+      <td>	<p><input type="text" name="user_name1" id="a1" value="Значение элемента a1" placeholder="Значение элемента a1"/></p></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><p><input type="text" name="labelC13" id="lebC13" value="C13" placeholder="C13"/></p></td>
+      <td>	<p><input type="text" name="user_name2" id="c13" value="Значение элемента c13" placeholder="Значение элемента c13"/></p></td>
+	 </tr>
+	      <tr>
+      <th scope="row">1</th>
+      <td><p><input type="text" name="label1" id="lebA1" value="A1" placeholder="A1"/></p></td>
+      <td>	<p><input type="text" name="user_name1" id="a1" value="Значение элемента a1" placeholder="Значение элемента a1"/></p></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><p><input type="text" name="labelC13" id="lebC13" value="C13" placeholder="C13"/></p></td>
+      <td>	<p><input type="text" name="user_name2" id="c13" value="Значение элемента c13" placeholder="Значение элемента c13"/></p></td>
+	 </tr>
+	      <tr>
+      <th scope="row">1</th>
+      <td><p><input type="text" name="label1" id="lebA1" value="A1" placeholder="A1"/></p></td>
+      <td>	<p><input type="text" name="user_name1" id="a1" value="Значение элемента a1" placeholder="Значение элемента a1"/></p></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><p><input type="text" name="labelC13" id="lebC13" value="C13" placeholder="C13"/></p></td>
+      <td>	<p><input type="text" name="user_name2" id="c13" value="Значение элемента c13" placeholder="Значение элемента c13"/></p></td>
+	 </tr>
+	 <tr>
+      <th scope="row">1</th>
+      <td><p><input type="text" name="label1" id="lebA1" value="A1" placeholder="A1"/></p></td>
+      <td>	<p><input type="text" name="user_name1" id="a1" value="Значение элемента a1" placeholder="Значение элемента a1"/></p></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><p><input type="text" name="labelC13" id="lebC13" value="C13" placeholder="C13"/></p></td>
+      <td>	<p><input type="text" name="user_name2" id="c13" value="Значение элемента c13" placeholder="Значение элемента c13"/></p></td>
+	 </tr>
+	      <tr>
+      <th scope="row">1</th>
+      <td><p><input type="text" name="label1" id="lebA1" value="A1" placeholder="A1"/></p></td>
+      <td>	<p><input type="text" name="user_name1" id="a1" value="Значение элемента a1" placeholder="Значение элемента a1"/></p></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><p><input type="text" name="labelC13" id="lebC13" value="C13" placeholder="C13"/></p></td>
+      <td>	<p><input type="text" name="user_name2" id="c13" value="Значение элемента c13" placeholder="Значение элемента c13"/></p></td>
+	 </tr>
+	      <tr>
+      <th scope="row">1</th>
+      <td><p><input type="text" name="label1" id="lebA1" value="A1" placeholder="A1"/></p></td>
+      <td>	<p><input type="text" name="user_name1" id="a1" value="Значение элемента a1" placeholder="Значение элемента a1"/></p></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><p><input type="text" name="labelC13" id="lebC13" value="C13" placeholder="C13"/></p></td>
+      <td>	<p><input type="text" name="user_name2" id="c13" value="Значение элемента c13" placeholder="Значение элемента c13"/></p></td>
+	 </tr>
+  </tbody>
+</table>
+<table class="table">
+<tr>
+<button onclick="makeJson()" type="button" class="btn btn-outline-primary" value="Сформировать json">Сформировать json</button>
+</tr> 
+<tr>
+<button onclick="sendData()" type="button" class="btn btn-outline-primary"value= "Отправить">Отправить</button>
+</tr> 
+</table>
+</form>
+
+{% endblock %}
+</body>
+</html>
+
