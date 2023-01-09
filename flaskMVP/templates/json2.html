@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+<title>Engineering 67</title>
+<script>
+let json={"a1":"val1","a2":"val2","a3":"val3"};
+let fo1 = new Map(Object.entries(json));
+let tbody="Какой-то html \n  ";
+fo1.forEach(function(value,key) {
+  console.log('key = ' + key +', value = ' + value);
+tbody= tbody+" \nКлюч "+key+" Значение "+ value + "Какая то инфа"
+});
+tbody= tbody+"\n Какой-то еще html ";
+console.log(tbody);
+</script>
+</head>
+
+</html>
