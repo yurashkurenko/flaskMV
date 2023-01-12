@@ -27,6 +27,10 @@ api =   Api(app)
 def welcome_user():
     return render_template("base.html")
 
+@app.route("/hello")
+
+def hello():
+    return render_template("hello.html")
 
 @app.route("/logging/")
 
