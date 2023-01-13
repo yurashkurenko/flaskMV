@@ -31,7 +31,10 @@ def welcome_user():
 
 def hello():
     return render_template("hello.html")
+@app.route("/hello1")
 
+def hello1():
+    return render_template("hello1.html")
 @app.route("/logging/")
 
 def welcome_use():
