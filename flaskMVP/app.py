@@ -56,7 +56,7 @@ def excel():
 
 @app.route('/returnjson', methods = ['GET'])
 def ReturnJSON():
-    return render_template("testexample.html")
+    return render_template("paraform.html")
     
 
 
