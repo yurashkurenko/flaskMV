@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>{% block title %}Engineering 67{% endblock %}</title>
+</head>
+<body> 
+<div id="div2">
+<p>Hello</p>
+</div>
+<p id='iddqd'>Hello</p>
+</div>
+<button onclick = "myFunc()">Нажми меня</button> <!-- добавляем атрибут событий onclick -->
+<script>
+		let stringhtml="<p>Начало</p>";
+		let json={"a1":"val1"};
+		let fo1 = new Map(Object.entries(json));
+		let key = "a";
+		let value = "val";
+		let i=1;
+		let keyn=key+String(i);
+		let valuen= value+String(i);
+	
+	function myFunc() {
+	i=i+1;
+	keyn=key+String(i);
+	valuen= value+String(i);
+	console.log(fo1);
+	console.log(i+" "+ keyn +" "+valuen);
+	console.log(json);
+	stringhtml=stringhtml+'<p>Продолжение</p>';
+	fourth = document.getElementById( "iddqd" );   // выбираем элемент с идентификатором third
+	fourth.innerHTML = stringhtml;
+	console.log(stringhtml);
+	  	  }
+</script>
+
+</body>
+</html>
+// нужно преобразовать строку в json JSON.parse();
