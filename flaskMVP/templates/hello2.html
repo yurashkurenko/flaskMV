@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>{% block title %}Engineering 67{% endblock %}</title>
+<style>
+.styled {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgba(220, 0, 0, 1);
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.styled:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+.styled:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+</style>
+
+</head>
+<body> 
+<div id="div2">
+<p>Hello</p>
+</div>
+<div id="div1">
+<input class="favorite styled"
+       type="button"
+       value="Add to favorites">
+
+<p>Hello</p>
+</div>
+<div id="div1">
+<p id="iddqd">Hello</p>
+<input type="button" value="Hello">document.getElementById( "div2" ).InnerHTML("Привет")</input><button name="button">Тык!</button>
+</div>
+		<button onclick = "myFunc()">Нажми меня</button> <!-- добавляем атрибут событий onclick -->
+		<div id = "first">Первый блок</div>
+		<div id = "second">Второй блок</div>
+		<div id = "third">Третий блок</div>
+		<script>
+		let str123='<p>Начальное значение</p>';
+		
+	function myFunc(str123) {
+	  let first = document.getElementById( "first" ),   // выбираем элемент с идентификатором first
+	      second = document.getElementById( "second" ), // выбираем элемент с идентификатором second
+	      third = document.getElementById( "third" );   // выбираем элемент с идентификатором third
+		  fourth = document.getElementById( "iddqd" );   // выбираем элемент с идентификатором third
+		  stringhtml='<p>Привет<p>Пока</p></p>';
+	  first.style.color = "red";    // изменяем цвет текста у элемента
+	  second.style.color = "green"; // изменяем цвет текста у элемента
+	  third.style.color = "blue";   // изменяем цвет текста у элемента	
+	  fourth.style.color = "red"; 
+	  str123=str123+'<p>Продолжение</p>';
+	  fourth.innerHTML = str123;
+	  <!-- str123=str123+'<p>Продолжение</p>'; -->
+	  	  }
+		</script>
+
+</body>
+</html>
+
